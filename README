@@ -9,6 +9,21 @@ For using the Maven repository one needs to add the following repository into th
 	<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 </repository>
 
+Now create a new project and add 
+<dependency>
+	<groupId>com.jme3</groupId>
+	<artifactId>bullet</artifactId>
+	<version>3.0.0-SNAPSHOT</version>
+	<type>pom</type>
+</dependency>
+to your dependencies and start coding :)
+
+
+
+
+
+
+
 To use the deployment-script one needs to add the following server config to settings.xml.
 (NOTE: Deployment requires a Sonatype-JIRA-User with access to teh repository, contact pflanzenmoerder for details)
 <server>
