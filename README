@@ -1,0 +1,19 @@
+
+For using the Maven repository one needs to add the following repository into the settings.xml or the project pom:
+
+<repository>
+	<id>oss-sonatype</id>
+	<snapshots>
+		<enabled>true</enabled>
+	</snapshots>
+	<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+</repository>
+
+To use the deployment-script one needs to add the following server config to settings.xml.
+(NOTE: Deployment requires a Sonatype-JIRA-User with access to teh repository, contact pflanzenmoerder for details)
+<server>
+	<id>jme3-sonatype</id>
+	<username><JIRA-Username></username>
+	<password><JIRA-Password></password>
+</server>
+

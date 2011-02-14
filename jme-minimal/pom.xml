@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+        Minimal libs for "most" things in JME3
+        
+        Initial version written by Peter LaValle / grigorii.pechorin
+        This version asjusted by Jochen Mader / pflanzenmoerder
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>minimal</artifactId>
+    <packaging>pom</packaging>    
+    <parent>
+        <groupId>com.jme3</groupId>
+        <artifactId>parent</artifactId>
+        <version>3.0.0-SNAPSHOT</version>
+    </parent>
+
+    <name>Minimal jME-pom</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>jmonkeyengine3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>lwjgl</artifactId>
+        </dependency>
+         
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>lwjgl_natives</artifactId>
+        </dependency>
+    
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>oggd</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>vorbisd</artifactId>
+        </dependency>
+    </dependencies>
+</project>

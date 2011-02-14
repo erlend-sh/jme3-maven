@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!--
+        Minimal libs for "most" things in JME3
+        
+        Initial version written by Peter LaValle / grigorii.pechorin
+        This version asjusted by Jochen Mader / pflanzenmoerder
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jme3</groupId>
+    <artifactId>parent</artifactId>
+    <version>3.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Parent POM for jME-based projects</name>
+    <url>https://github.com/erlend-sh/jme3-maven</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jme.version>3.0.0-SNAPSHOT</jme.version>
+    </properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>jme3-sonatype</id>
+            <name>Sonatype Repo</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>jmonkeyengine3</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>lwjgl</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>lwjgl_natives</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>oggd</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>vorbisd</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>jbullet</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>stack-alloc</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>vecmath</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jme3</groupId>
+                <artifactId>jme3testdata</artifactId>
+                <version>${jme.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>
+
