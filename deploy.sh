@@ -18,10 +18,10 @@ $CMD -DartifactId=$1 -Dfile=$2 -Dsource=$3
 #create dir for new version, download and unzip
 mkdir $VERSION
 curl $URL > $URI
+cd $VERSION
 unzip $FILENAME
 
 #deploy downloaded jars
-cd $VERSION
 deploy_with_source jmonkeyengine3 jMonkeyEngine3.jar sources.zip
 deploy lwjgl lib/lwjgl.jar
 deploy lwjgl-natives lib/jME3-lwjgl-natives.jar
