@@ -5,7 +5,7 @@ FILENAME=jME3_$(date -v -1d +%m-%d-%Y).zip
 URL=http://jmonkeyengine.com/nightly/$FILENAME
 SONAURL=https://oss.sonatype.org/content/repositories/snapshots/
 URI=$VERSION/$FILENAME
-CMD='mvn deploy:deploy-file -Durl='$SONAURL' -DrepositoryId=jme3-sonatype -DartifactId=jmonkeyengine3 -DgroupId='$GROUPID' -Dpackaging=pom -Dversion='$DEPLOYVERSION 
+CMD='mvn deploy:deploy-file -Durl='$SONAURL' -DrepositoryId=jme3-sonatype -DartifactId=jmonkeyengine3 -DgroupId='$GROUPID' -Dpackaging=jar -Dversion='$DEPLOYVERSION 
 
 deploy( ) {
 $CMD -DartifactId=$1 -Dfile=$2 
