@@ -24,7 +24,7 @@
         <dependency>
             <groupId>com.jme3</groupId>
             <artifactId>bullet</artifactId>
-            <version>${jme3.version}</version>
+            <version>${project.version}</version>
             <type>pom</type>
         </dependency>
 

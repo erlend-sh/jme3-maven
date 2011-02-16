@@ -17,7 +17,7 @@ $CMD -DartifactId=$1 -Dfile=$2 -Dsource=$3
 
 #create dir for new version, download and unzip
 mkdir $VERSION
-curl $URL > $URI
+#curl $URL > $URI
 cd $VERSION
 unzip $FILENAME
 
