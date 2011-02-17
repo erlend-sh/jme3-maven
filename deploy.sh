@@ -1,7 +1,7 @@
 GROUPID=com.jme3
 DEPLOYVERSION=3.0.0-SNAPSHOT
-VERSION=3.0.$(date -v -1d +%Y-%m-%d)
-FILENAME=jME3_$(date -v -1d +%m-%d-%Y).zip
+VERSION=3.0.$(date -v -2d +%Y-%m-%d)
+FILENAME=jME3_$(date -v -2d +%m-%d-%Y).zip
 URL=http://jmonkeyengine.com/nightly/$FILENAME
 SONAURL=https://oss.sonatype.org/content/repositories/snapshots/
 URI=$VERSION/$FILENAME

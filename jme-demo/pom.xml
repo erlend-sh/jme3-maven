@@ -27,7 +27,10 @@
             <version>${project.version}</version>
             <type>pom</type>
         </dependency>
-
+        <dependency>
+            <groupId>com.jme3</groupId>
+            <artifactId>jme3test</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.jme3</groupId>
             <artifactId>jme3testdata</artifactId>
