@@ -46,7 +46,7 @@
 
             <dependency>
                 <groupId>com.jme3</groupId>
-                <artifactId>lwjgl_natives</artifactId>
+                <artifactId>lwjgl-natives</artifactId>
                 <version>${jme.version}</version>
             </dependency>
 
