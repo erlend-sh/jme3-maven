@@ -22,7 +22,7 @@ Running the demos:
 check out jme-demo-test and run "mvn exec:java"
 
 Using the archetypes:
-mvn archetype:generate -DarchetypeCatalog=http://oss.sonatype.org/servicenapshots/content/
+mvn archetype:generate -DarchetypeCatalog=http://oss.sonatype.org/service/local/repositories/snapshots/content/
 
 
 To use the deployment-script one needs to add the following server config to settings.xml.
