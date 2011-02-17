@@ -18,7 +18,8 @@ Now create a new project and add
 </dependency>
 to your dependencies and start coding :)
 
-
+Running the demos:
+check out jme-demo-test and run "mvn exec:java"
 
 
 
