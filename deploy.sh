@@ -1,7 +1,7 @@
 GROUPID=com.jme3
 DEPLOYVERSION=3.0.0-SNAPSHOT
 VERSION=3.0.$(date -v -2d +%Y-%m-%d)
-FILENAME=jME3_$(date -v -2d +%m-%d-%Y).zip
+FILENAME=jME3_$(date -v -2d +%Y-%m-%d).zip
 URL=http://jmonkeyengine.com/nightly/$FILENAME
 SONAURL=https://oss.sonatype.org/content/repositories/snapshots/
 URI=$VERSION/$FILENAME
@@ -31,15 +31,15 @@ deploy jbullet lib/jbullet.jar
 deploy stack-alloc lib/stack-alloc.jar
 deploy vecmath lib/vecmath.jar
 deploy vorbisd lib/j-ogg-vorbisd.jar
-deploy gluegen-rt lib/gluegen-rt.jar
+#deploy gluegen-rt lib/gluegen-rt.jar
 deploy jinput lib/jinput.jar
-deploy nifty-examples lib/nifty-examples-1.2_small.jar
+deploy nifty-examples lib/nifty-examples-1.3-SNAPSHOT.jar
 deploy jme3test lib/jme3test.jar
-deploy nifty-style-black lib/nifty-style-black-1.2-SNAPSHOT.jar
-deploy jogl-natives lib/jME3-jogl-natives.jar
-deploy jogl lib/jogl.jar				
+deploy nifty-style-black lib/nifty-style-black-1.3-SNAPSHOT.jar
+#deploy jogl-natives lib/jME3-jogl-natives.jar
+#deploy jogl lib/jogl.jar				
 deploy xmlpull lib/xmlpull-xpp3-1.1.4c.jar
-deploy nifty lib/nifty-1.2-SNAPSHOT.jar
-deploy jheora-debug lib/jheora-debug-0.6.0.jar
-deploy nifty-default-controls lib/nifty-default-controls-1.2-SNAPSHOT.jar
+deploy nifty lib/nifty-1.3-SNAPSHOT.jar
+deploy jheora-jst-debug lib/jheora-jst-debug-0.6.0.jar
+deploy nifty-default-controls lib/nifty-default-controls-1.3-SNAPSHOT.jar
 
