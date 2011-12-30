@@ -1,35 +1,56 @@
 
-For using the Maven repository one needs to add the following repository into the settings.xml or the project pom:
+Jme3-maven is an ongoing voluntary effort by the JmonkeyEngine COMMUNITY to
+provide usable jME3 binaries in the Sonatype Maven repositories.  When asking for
+help with these Maven artifacts, please keep in mind that the core JmonkeyEngine
+dev team is *not* maintaining these artifacts.     Currently your best source of
+support is JMonkeyEngine community member stub22, who is attempting to update
+and run the upload script about once per month, starting in December 2011.
 
-<repository>
-	<id>oss-sonatype</id>
-	<snapshots>
-		<enabled>true</enabled>
-	</snapshots>
-	<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-</repository>
+This Github project houses two sets of artifacts:
 
-Now create a new project and add 
-<dependency>
-	<groupId>com.jme3</groupId>
-	<artifactId>bullet</artifactId>
-	<version>3.0.0-SNAPSHOT</version>
-	<type>pom</type>
-</dependency>
-to your dependencies and start coding :)
-
-Running the demos:
-check out jme-demo-test and run "mvn exec:java"
-
-Using the archetypes:
-mvn archetype:generate -DarchetypeCatalog=http://oss.sonatype.org/service/local/repositories/snapshots/content/
-
-
-To use the deployment-script one needs to add the following server config to settings.xml.
-(NOTE: Deployment requires a Sonatype-JIRA-User with access to teh repository, contact pflanzenmoerder for details)
-<server>
-	<id>jme3-sonatype</id>
-	<username><JIRA-Username></username>
-	<password><JIRA-Password></password>
-</server>
+	1) An upload script which we use to deliver the jME3 binary snapshots to
+		the Sonatype "snaphots" area.   
+		
+		For basic information about using the uploaded jars in your own project,
+		see README_using_jars.txt.
+		
+		For details about how we upload the jars, see README_sonatype_upload.txt.
+		
+	2) A set of currently out-of-date example pom.xml projects and maven archetypes.
+		(This category includes most of the files in this github repo).  
+		
+		See README_demos_and_archetypes.txt.
+		
+		
+/*
+ * Copyright (c) 2011 jme3-maven
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *
+ * * Redistributions of source code must retain the above copyright
+ *   notice, this list of conditions and the following disclaimer.
+ *
+ * * Redistributions in binary form must reproduce the above copyright
+ *   notice, this list of conditions and the following disclaimer in the
+ *   documentation and/or other materials provided with the distribution.
+ *
+ * * Neither the name of 'jme3-maven' nor the names of its contributors
+ *   may be used to endorse or promote products derived from this software
+ *   without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ * TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
