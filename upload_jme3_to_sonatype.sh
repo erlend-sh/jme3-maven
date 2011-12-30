@@ -60,9 +60,6 @@ deploy_lib vecmath
 deploy xmlpull 	lib/xmlpullxpp3.jar
 deploy noise 	lib/noise-0.0.1-SNAPSHOT.jar
 
-# Large library of test data
-deploy_lib jME3-testdata
-
 # Ogg sound stuff
 deploy_lib jME3-jogg
 deploy_lib j-ogg-oggd
@@ -74,6 +71,10 @@ deploy_lib nifty
 deploy_lib nifty-default-controls
 deploy_lib nifty-examples
 deploy_lib nifty-style-black
+
+# Large (~39M) library of test data
+deploy_lib jME3-testdata
+
 
 # /*
 # * Copyright (c) 2011 jme3-maven
