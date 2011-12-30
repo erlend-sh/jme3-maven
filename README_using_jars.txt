@@ -9,11 +9,10 @@ You can see our delivered jars in the sonatype "snapshots" repository at:
 
 	http://oss.sonatype.org/content/repositories/public/com/jme3/
 	
-The repository contains all the "current" jars recently uploaded by our script
-(from nightly build 2011-12-15), as well as some "old" jars leftover from 
-previous incarnations.  (TODO:  Clear the snapshots directory through Sonatype GUI).
+The repository contains all the jars uploaded by our script, copied from the
+jME3 nightly build 2011-12-15.
 
-The "good" artifacts all have names matching the jars contained in the 
+These artifacts all have names matching the jars contained in the 
 current jME3 nightly build, with the exception of one third party jar
 that has version information embedded in its name, as delivered by
 the JME3 team.  Here is how we have mapped these names into maven artifactIds:

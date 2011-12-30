@@ -84,7 +84,8 @@ https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage
 				noise-0.0.1-SNAPSHOT.jar ->  artifactId= noise
 				
 		ii) Demo jar jMonkeyEngine3 has lower-case artifactID=jmonkeyengine3
-		
+-------------------------------------------------------------------------------		
+
 8) Update these README files and all demo + archetype files, and commit these
 changes as well as any script changes to github.
 
