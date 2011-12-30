@@ -14,15 +14,14 @@ The repository contains all the "current" jars recently uploaded by our script
 previous incarnations.  (TODO:  Clear the snapshots directory through Sonatype GUI).
 
 The "good" artifacts all have names matching the jars contained in the 
-current jME3 nightly build, with the exception of two third party jars
-that have version information embedded in their names, as delivered by
+current jME3 nightly build, with the exception of one third party jar
+that has version information embedded in its name, as delivered by
 the JME3 team.  Here is how we have mapped these names into maven artifactIds:
 
-	xmlpullxpp3.jar				=> 		xmlpull		(TODO:  Should be xmlpullxpp).
 	noise-0.0.1-SNAPSHOT.jar	=>		noise
 	
-We have also mapped the "main" jmonkey jar name (containing the test+demo code)
-to all-lower-case, as follows:
+We have also mapped the "main" jmonkey jar name (containing the jME3 test+demo 
+code) to all-lower-case, as follows:
 
 	jMonkeyEngine3 				=>		jmonkeyengine3
 	

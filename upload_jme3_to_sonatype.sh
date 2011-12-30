@@ -51,13 +51,12 @@ deploy_lib jinput
 deploy_lib eventbus
 deploy_lib stack-alloc
 deploy_lib vecmath
+deploy_lib xmlpull-xpp3
 
 # Other 3rd party libraries, which are currently shipped by JME3 team with a version
-# stamp embedded in the name, which we strip off in the renaming.  xmlpull should
-# probably be xmpullxpp, but we went with shorter name to match jars already delivered
-# to Sonatype with earlier versions of deploy.sh.
+# stamp embedded in the name, which we strip off in the renaming.  
 # TODO: Replace with proper 3rd party deps before "release" to Sonatype.
-deploy xmlpull 	lib/xmlpullxpp3.jar
+
 deploy noise 	lib/noise-0.0.1-SNAPSHOT.jar
 
 # Ogg sound stuff

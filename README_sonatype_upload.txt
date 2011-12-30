@@ -66,8 +66,10 @@ of the unpacked build.
 	
 	C) Script uses exact jar names from nightly build as the artifactID everywhere,
 	EXCEPT 
-		i) when jar name contains version information:  "xmlpull(xpp)" and "noise"	
-		ii) Demo jar jMonkeyEngine3 has lower-cased artifactID=jmonkeyengine3
+		i) Nightly build jar name contains version information:  
+				noise-0.0.1-SNAPSHOT.jar ->  artifactId= noise
+				
+		ii) Demo jar jMonkeyEngine3 has lower-case artifactID=jmonkeyengine3
 		
 		
 /*
