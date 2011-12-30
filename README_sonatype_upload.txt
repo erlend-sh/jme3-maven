@@ -37,7 +37,21 @@ of the unpacked build.
 5) Copy the file   upload_jme3_to_sonatype.sh  into the unpacked build directory.
 
 ---------------------------------------------------------------------------------------
-6)   Run		upload_jme3_to_sonatype.sh  
+6) Compare the script and the jars in the "lib" directory to see if any jar names
+have changed, or any jars have been added or removed.   Make appropriate changes
+to the script, and commit those changes back to the github repo after you have
+tested them.
+
+If any artifacts have been removed, or their names have changed, then you should
+manually clear out the Sonatype snapshot repository through their GUI, so that
+we don't have old jars dangling from our snapshot and confusing our users.  
+
+See instructions for that step here:
+
+https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-7a.2.PublishSnapshots
+
+---------------------------------------------------------------------------------------
+7)   Run		upload_jme3_to_sonatype.sh  
 
 	A) Script expects current directory to contain 
 		
@@ -71,7 +85,9 @@ of the unpacked build.
 				
 		ii) Demo jar jMonkeyEngine3 has lower-case artifactID=jmonkeyengine3
 		
-		
+8) Update these README files and all demo + archetype files, and commit these
+changes as well as any script changes to github.
+
 /*
  * Copyright (c) 2011 jme3-maven
  * All rights reserved.
