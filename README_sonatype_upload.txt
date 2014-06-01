@@ -19,9 +19,9 @@ server config to your maven installation's settings.xml file.
 </server>
 
 ---------------------------------------------------------------------------------------
-2) 	Download latest or "best" JME3 nightly build from:
+2) 	Download latest stable JME3 nightly build from:
 	
-	http://jmonkeyengine.com/nightly/
+	http://updates.jmonkeyengine.org/stable/3.0/engine/
 	
 	(If automating this process, add a "direct." to the beginning of the hostname,
 	but shhhh, don't tell the robots).
@@ -37,7 +37,13 @@ of the unpacked build.
 5) Copy the file   upload_jme3_to_sonatype.sh  into the unpacked build directory.
 
 ---------------------------------------------------------------------------------------
-6) Compare the script and the jars in the "lib" directory to see if any jar names
+6) Update the DEPLOYVERSION variable in the script to match the original
+build date of the jars you downloaded in step #2.
+
+	DEPLOYVERSION=3.0.0.YYYYMMDD-SNAPSHOT
+
+---------------------------------------------------------------------------------------
+7) Compare the script and the jars in the "lib" directory to see if any jar names
 have changed, or any jars have been added or removed.   Make appropriate changes
 to the script, and commit those changes back to the github repo after you have
 tested them.
@@ -51,7 +57,7 @@ See instructions for that step here:
 https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-7a.2.PublishSnapshots
 
 ---------------------------------------------------------------------------------------
-7)   Run		upload_jme3_to_sonatype.sh  
+8)   Run		upload_jme3_to_sonatype.sh  
 
 	A) Script expects current directory to contain 
 		
@@ -71,7 +77,7 @@ https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage
 	B) Script is configured by just 4 shell variables 
 	
 	GROUPID=com.jme3
-	DEPLOYVERSION=3.0.0-SNAPSHOT
+	DEPLOYVERSION=3.0.0.YYYYMMDD-SNAPSHOT
 	SONAURL=https://oss.sonatype.org/content/repositories/snapshots/
 	CMD='mvn deploy:deploy-file -Durl='$SONAURL' -DrepositoryId=sonatype-nexus-snapshots -DgroupId='$GROUPID' -Dpackaging=jar -Dversion='$DEPLOYVERSION
 
@@ -86,11 +92,15 @@ https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage
 		ii) Demo jar jMonkeyEngine3 has lower-case artifactID=jmonkeyengine3
 -------------------------------------------------------------------------------		
 
-8) Update these README files and all demo + archetype files, and commit these
+9) Update these README files and all demo + archetype files, and commit these
 changes as well as any script changes to github.
 
+-------------------------------------------------------------------------------		
+
+10) Announce the update to the JME3 community.
+
 /*
- * Copyright (c) 2011 jme3-maven
+ * Copyright (c) 2011-4 jme3-maven
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -119,4 +129,5 @@ changes as well as any script changes to github.
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */		
+ */
+
