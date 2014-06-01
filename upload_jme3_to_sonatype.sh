@@ -1,5 +1,5 @@
 GROUPID=com.jme3
-DEPLOYVERSION=3.0.0-SNAPSHOT
+DEPLOYVERSION=3.0.0.20140325-SNAPSHOT
 SONAURL=https://oss.sonatype.org/content/repositories/snapshots/
 CMD='mvn deploy:deploy-file -Durl='$SONAURL' -DrepositoryId=sonatype-nexus-snapshots -DgroupId='$GROUPID' -Dpackaging=jar -Dversion='$DEPLOYVERSION 
 
@@ -18,10 +18,10 @@ deploy_lib ( ) {
 $CMD -DartifactId=$1 -Dfile=lib/${1}.jar
 }
 
-# Top JMonkey project (as of 2011-12-15) is a launchable jar 
+# Top JMonkey project (as of 2014-03-25) is a launchable jar 
 # containing just the demo/test code, which we deploy together 
 # with a single arbitrary sourceball: sources.zip
-# TODO: Sources will need more treatment before a proper Sonatype 
+# TODO: Sources will need more treatment before a full Sonatype 
 # "release".
 
 deploy_with_source jmonkeyengine3 jMonkeyEngine3.jar sources.zip
@@ -35,6 +35,7 @@ deploy_lib jME3-lwjgl
 deploy_lib jME3-lwjgl-natives
 deploy_lib lwjgl
 
+
 # Bullet physics related
 deploy_lib jME3-jbullet
 deploy_lib jbullet
@@ -42,6 +43,8 @@ deploy_lib jbullet
 # Other JME3 feature libs, excluding TestData + Nifty
 deploy_lib jME3-blender
 deploy_lib jME3-desktop
+deploy_lib jME3-effects
+deploy_lib jME3-networking
 deploy_lib jME3-plugins
 deploy_lib jME3-terrain
 
@@ -53,16 +56,19 @@ deploy_lib stack-alloc
 deploy_lib vecmath
 deploy_lib xmlpull-xpp3
 
-# Other 3rd party libraries, which are currently shipped by JME3 team with a version
-# stamp embedded in the name, which we strip off in the renaming.  
-# TODO: Replace with proper 3rd party deps before "release" to Sonatype.
-
-deploy noise 	lib/noise-0.0.1-SNAPSHOT.jar
+#Here are 4 more 3rd party libraries added between 2012-12-20 and 2014-03-25
+deploy_lib gluegen-rt.jar
+deploy_lib jglfont-core.jar
+deploy_lib joal.jar
+deploy_lib jogl-all.jar
 
 # Ogg sound stuff
 deploy_lib jME3-jogg
 deploy_lib j-ogg-oggd
 deploy_lib j-ogg-vorbisd
+
+#Android OpenAL sound
+jME3-openal-soft-natives-android.jar
 
 # Nifty GUI
 deploy_lib jME3-niftygui
@@ -76,7 +82,7 @@ deploy_lib jME3-testdata
 
 
 # /*
-# * Copyright (c) 2011 jme3-maven
+# * Copyright (c) 2011-2014 jme3-maven
 # * All rights reserved.
 # *
 # * Redistribution and use in source and binary forms, with or without
